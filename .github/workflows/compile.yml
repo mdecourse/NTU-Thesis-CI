@@ -4,7 +4,7 @@ name: LaTeX Compile and Deploy
 on:
   push:
     branches:
-      - master
+      - pdf
 
 jobs:
   build-release:
@@ -16,7 +16,7 @@ jobs:
         ref: master
 
     - name: Clone From Hsins/NTU-Thesis
-      run: git clone https://github.com/Hsins/NTU-Thesis.git template
+      run: git clone https://github.com/mdecourse/NTU-Thesis-LaTeX-Template template
 
     - name: Copy Fonts
       run: cp -avr ./template/fonts ./
